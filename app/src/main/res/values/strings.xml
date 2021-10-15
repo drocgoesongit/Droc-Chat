@@ -2,4 +2,8 @@
     <string name="app_name">Droc Chat</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_to">Login to</string>
+    <string name="drocchat">DrocChat</string>
+    <string name="click_for_sign_up">Click for sign up</string>
+    <string name="sign_up">Sign up</string>
 </resources>

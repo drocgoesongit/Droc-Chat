@@ -15,7 +15,6 @@ public class FragmentAdapters extends FragmentPagerAdapter {
         super(fm);
     }
 
-
     @NonNull
     @Override
     public Fragment getItem(int position) {

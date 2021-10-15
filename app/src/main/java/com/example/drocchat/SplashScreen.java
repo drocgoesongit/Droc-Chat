@@ -24,7 +24,7 @@ FirebaseAuth auth;
                     startActivity(i);
                 }
                 else{
-                    Intent j = new Intent(SplashScreen.this, SignupActivity.class);
+                    Intent j = new Intent(SplashScreen.this, WelcomeScreen.class);
                     startActivity(j);
                 }
             }

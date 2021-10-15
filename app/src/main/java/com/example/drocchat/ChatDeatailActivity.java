@@ -68,6 +68,7 @@ public class ChatDeatailActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         binding.chatRecyclerView.setLayoutManager(linearLayoutManager);
 
+
         database.getReference().child("chats")
                 .child(senderRoom)
                 .addValueEventListener(new ValueEventListener() {
@@ -80,6 +81,7 @@ public class ChatDeatailActivity extends AppCompatActivity {
                             messageModels.add(model);
                         }
                         chatAdapter.notifyDataSetChanged();
+                        binding.chatRecyclerView.smoothScrollToPosition(messageModels.size());
                     }
 
                     @Override

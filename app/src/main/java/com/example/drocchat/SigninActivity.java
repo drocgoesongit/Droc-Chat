@@ -38,6 +38,7 @@ FirebaseDatabase database;
         binding = ActivitySigninBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         auth = FirebaseAuth.getInstance();
+        getSupportActionBar().hide();
         progressDialog = new ProgressDialog(SigninActivity.this);
         progressDialog.setTitle("Login");
         progressDialog.setMessage("Logging into your account");
@@ -50,8 +51,6 @@ FirebaseDatabase database;
                 startActivity(intent);
             }
         });
-
-
 
         binding.btnSignupIn.setOnClickListener(new View.OnClickListener() {
             @Override

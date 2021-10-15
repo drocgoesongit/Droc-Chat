@@ -78,7 +78,7 @@ public class ChatAdapter extends  RecyclerView.Adapter {
         public RecieverViewHolder(@NonNull View itemView) {
             super(itemView);
             recieverMsg = itemView.findViewById(R.id.recieverText);
-            recieverTime = itemView.findViewById(R.id.recieverTime);
+
         }
     }
     public class SenderViewHolder extends RecyclerView.ViewHolder{
@@ -87,7 +87,6 @@ public class ChatAdapter extends  RecyclerView.Adapter {
         public SenderViewHolder(@NonNull View itemView) {
             super(itemView);
             senderMsg = itemView.findViewById(R.id.senderText);
-            senderTime = itemView.findViewById(R.id.senderTime);
         }
     }
 

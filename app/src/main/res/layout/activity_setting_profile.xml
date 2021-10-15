@@ -4,16 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center_horizontal"
-    android:background="@color/white"
-    android:orientation="vertical"
-    tools:context=".SignupActivity">
+    tools:context=".SettingProfile">
 
     <LinearLayout
-        android:id="@+id/linearlayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginEnd="15dp"
@@ -31,7 +26,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:fontFamily="@font/montserrat_bold"
-            android:text="Sign up with "
+            android:text="Set your"
             android:textColor="@color/mid_green"
             android:textSize="40sp" />
 
@@ -43,18 +38,18 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="-8dp"
             android:fontFamily="@font/montserrat_bold"
-            android:text="DrocChat"
+            android:text="Profile"
             android:textColor="@color/dark_green"
             android:textSize="40sp" />
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="45dp"
-            android:layout_marginBottom="45dp"
-            app:srcCompat="@drawable/signup" />
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="35dp"
+            app:srcCompat="@drawable/profile" />
 
         <TextView
             android:id="@+id/textView13"
@@ -62,13 +57,67 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginBottom="8dp"
             android:fontFamily="@font/montserrat"
             android:text="Username"
             android:textColor="@color/grey_text"
             android:textSize="12sp" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/black">
+
+                <ImageView
+                    android:id="@+id/profilePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/login_main" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:id="@+id/btn_edit_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_background"
+                android:fontFamily="@font/montserrat"
+                android:text="Edit Photo"
+                android:textColor="#000000"
+                app:backgroundTint="@color/mid_green"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/materialCardView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Status"
+            android:textColor="@color/grey_text"
+            android:textSize="12sp" />
+
         <EditText
-            android:id="@+id/etUsername"
+            android:id="@+id/etStatus"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="8dp"
@@ -82,84 +131,18 @@
             android:textColor="#000000"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Email"
-            android:textColor="@color/grey_text"
-            android:textSize="12sp" />
-
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/text_background"
-            android:ems="10"
-            android:fontFamily="@font/montserrat"
-            android:hint="enter email"
-            android:inputType="textEmailAddress"
-            android:padding="9dp"
-            android:textColor="#000000"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Password"
-            android:textColor="@color/grey_text"
-            android:textSize="12sp" />
-
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:background="@drawable/text_background"
-            android:ems="10"
-            android:fontFamily="@font/montserrat"
-            android:hint="enter password"
-            android:inputType="textPassword"
-            android:padding="9dp"
-            android:textColor="#000000"
-            android:textSize="20sp" />
-
         <Button
-            android:id="@+id/btn_signup"
+            android:id="@+id/btn_save"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/button_bg"
             android:fontFamily="@font/montserrat_bold"
-            android:text="Sign up"
+            android:text="Save"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:backgroundTint="@color/dark_green" />
 
-        <TextView
-            android:id="@+id/tw_already"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Already have an account?" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal" />
-
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+

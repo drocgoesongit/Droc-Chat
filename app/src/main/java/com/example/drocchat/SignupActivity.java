@@ -44,6 +44,7 @@ public class SignupActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(SignupActivity.this);
         progressDialog.setTitle("Creating account");
         progressDialog.setMessage("We're creating your account");
+        getSupportActionBar().hide();
 
 
 
@@ -71,10 +72,6 @@ public class SignupActivity extends AppCompatActivity {
                                     binding.etPassword.getText().toString());
                             String id = task.getResult().getUser().getUid();
                             database.getReference().child("Users").child(id).setValue(user);
-                            // practicing user info getting and setting from model to database. :D
-                            Users userEmail = new Users(binding.etEmail.getText().toString());
-                            String userName= binding.etUsername.getText().toString();
-                            database.getReference().child(userName).child(id).setValue(userEmail);
                             Intent intent = new Intent(SignupActivity.this, MainActivity.class);
                             startActivity(intent);
                         }
