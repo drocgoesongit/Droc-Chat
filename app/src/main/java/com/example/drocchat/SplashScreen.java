@@ -28,7 +28,7 @@ FirebaseAuth auth;
                     startActivity(j);
                 }
             }
-        },4000);
+        },3500);
     }
 
 }

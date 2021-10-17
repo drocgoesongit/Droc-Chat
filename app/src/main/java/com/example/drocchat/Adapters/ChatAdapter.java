@@ -15,7 +15,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
-
 public class ChatAdapter extends  RecyclerView.Adapter {
     ArrayList<MessageModel> messageModel;
     Context context;
@@ -37,6 +36,7 @@ public class ChatAdapter extends  RecyclerView.Adapter {
             return RECIEVER_VIEW_TYPE;
         }
     }
+
 // inflating the required layout in oncreate ViewHolder. :D
     @NonNull
     @Override

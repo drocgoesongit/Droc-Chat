@@ -28,13 +28,13 @@
             android:src="@drawable/ic_back_button_rectangled" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/usersname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:fontFamily="@font/montserrat_bold"
-            android:text="Edit your"
+            android:text="User's"
             android:textColor="@color/mid_green"
             android:textSize="40sp" />
 
@@ -44,37 +44,28 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="-8dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginTop="-10dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="Profile"
             android:textColor="@color/dark_green"
             android:textSize="40sp" />
 
-        <TextView
-            android:id="@+id/txtVi16"
-            android:layout_width="wrap_content"
-            android:layout_height="14dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Profile Photo"
-            android:textColor="@color/grey_text"
-            android:textSize="12sp" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:orientation="horizontal">
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/materialCardView"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="180dp"
+                android:layout_height="220dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
                 app:cardCornerRadius="12dp"
+                app:cardElevation="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:strokeColor="@color/black">
@@ -88,20 +79,6 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <Button
-                android:id="@+id/plus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/text_background"
-                android:fontFamily="@font/montserrat"
-                android:text="Edit Photo"
-                android:textColor="#000000"
-                app:backgroundTint="@color/mid_green"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/materialCardView"
-                app:layout_constraintTop_toTopOf="parent" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -111,7 +88,6 @@
             android:layout_height="14dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
             android:fontFamily="@font/montserrat"
             android:text="Name on DrocChat"
             android:textColor="@color/grey_text"
@@ -160,40 +136,19 @@
             android:textColor="#000000"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/textew16"
-            android:layout_width="wrap_content"
-            android:layout_height="14dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Account Settings"
-            android:textColor="@color/grey_text"
-            android:textSize="12sp" />
-
         <Button
-            android:id="@+id/logOut"
-            android:layout_width="wrap_content"
-            android:layout_height="56dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/text_background"
-            android:fontFamily="@font/montserrat"
-            android:text="Edit Photo"
-            android:textColor="#000000"
-            app:backgroundTint="#FEC7C7" />
-
-
-        <Button
-            android:id="@+id/saveSetting"
+            android:id="@+id/message"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/button_bg"
             android:fontFamily="@font/montserrat_bold"
-            android:text="Save"
+            android:text="Message"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:backgroundTint="@color/dark_green" />
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

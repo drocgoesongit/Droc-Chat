@@ -84,7 +84,7 @@ public class  SettingActivity extends AppCompatActivity {
                         Picasso.get()
                                 .load(users.getProfilePic())
                                 .placeholder(R.drawable.ic_user)
-                                .into(binding.profilePicture);
+                                .into(binding.profilePhoto);
                         binding.userSetting.setText(users.getUsername());
                         binding.statusSetting.setText(users.getStatus());
                     }
@@ -115,7 +115,7 @@ public class  SettingActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(data.getData()!= null){
             Uri sFile = data.getData();
-            binding.profilePicture.setImageURI(sFile);
+            binding.profilePhoto.setImageURI(sFile);
 
             final StorageReference reference = storage.getReference().child("profilePic")
                     .child(FirebaseAuth.getInstance().getUid());

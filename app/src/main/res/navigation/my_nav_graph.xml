@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph"
+    app:startDestination="@id/fragment_chats">
+
+    <fragment
+        android:id="@+id/fragment_chats"
+        android:name="com.example.drocchat.Fragments.ChatsFragment"
+        android:label="home"
+        tools:layout="@layout/fragment_chats"/>
+
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.example.drocchat.Fragments.CallsFragment"
+        android:label="profile"
+        tools:layout="@layout/fragment_calls"/>
+
+</navigation>

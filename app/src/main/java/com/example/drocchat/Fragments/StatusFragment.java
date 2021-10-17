@@ -15,6 +15,7 @@ import com.example.drocchat.R;
  * Use the {@link StatusFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+
 public class StatusFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
