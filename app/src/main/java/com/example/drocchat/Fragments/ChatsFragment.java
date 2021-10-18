@@ -19,6 +19,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.sql.ClientInfoStatus;
 import java.util.ArrayList;
@@ -38,7 +39,7 @@ public class ChatsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
-                // Inflate the layout for this fragment
+        // Inflate the layout for this fragment
         binding = FragmentChatsBinding.inflate(inflater, container, false);
         database = FirebaseDatabase.getInstance();
 
@@ -47,6 +48,19 @@ public class ChatsFragment extends Fragment {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         binding.chatRecyclerView.setLayoutManager(layoutManager);
+
+        database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Users user = snapshot.getValue(Users.class);
+                Picasso.get().load(user.getProfilePic()).placeholder(R.drawable.signup).into(binding.userImage);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         database.getReference().child("Users").addValueEventListener(new ValueEventListener() {
             @Override
@@ -67,6 +81,7 @@ public class ChatsFragment extends Fragment {
 
             }
         });
+
 
 
         return binding.getRoot();

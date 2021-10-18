@@ -49,7 +49,6 @@ public class  SettingActivity extends AppCompatActivity {
             }
         });
 
-
 //      updating username and status by save button. :D
         binding.saveSetting.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,6 +105,15 @@ public class  SettingActivity extends AppCompatActivity {
                 intent.setType("image/*");
                 startActivityForResult(intent, 33);
 //                Done by creating intent and setting its type and action and calling activityForResult. :D
+            }
+        });
+
+        binding.logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(SettingActivity.this, SigninActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -34,7 +34,7 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-10dp"
+            android:layout_marginTop="-15dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="DrocChat"
             android:textColor="@color/dark_green"

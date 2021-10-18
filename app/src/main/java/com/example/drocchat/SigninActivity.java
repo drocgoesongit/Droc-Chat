@@ -32,6 +32,7 @@ FirebaseAuth auth;
 ProgressDialog progressDialog;
 GoogleSignInClient mGoogleSignInClient;
 FirebaseDatabase database;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

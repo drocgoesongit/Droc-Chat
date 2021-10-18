@@ -117,5 +117,15 @@ public class ChatDeatailActivity extends AppCompatActivity {
                 });
             }
         });
+
+        // Opening Receiver's profile.
+        binding.userName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent  = new Intent(ChatDeatailActivity.this, SelfProfileActivity.class);
+                intent.putExtra("id", recieverId);
+                startActivity(intent);
+            }
+        });
     }
 }
