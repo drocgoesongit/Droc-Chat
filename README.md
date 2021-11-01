@@ -13,7 +13,7 @@ One to One chatting application. Part of a practice project. With firebase datab
 
 
 ## Mockup designs
-![Droc Chat](https://github.com/drocgoesongit/drocgoesongit/blob/master/splashScreen.png)
-![Droc Chat](https://github.com/drocgoesongit/drocgoesongit/blob/master/SearchActivity.png)
-![Droc Chat](https://github.com/drocgoesongit/drocgoesongit/blob/master/welcomeScreen.png)
-![Droc Chat](https://github.com/drocgoesongit/drocgoesongit/blob/master/MainActivity.png)
+![Droc Chat](https://github.com/drocgoesongit/drocgoesongit/blob/master/splash_updated.png)
+&nbsp;&nbsp;&nbsp;![Droc Chat](https://github.com/drocgoesongit/drocgoesongit/blob/master/welcome_updated.png)&nbsp;&nbsp;&nbsp;
+![Droc Chat](https://github.com/drocgoesongit/drocgoesongit/blob/master/search_updated.png)
+&nbsp;&nbsp;&nbsp;![Droc Chat](https://github.com/drocgoesongit/drocgoesongit/blob/master/login_updated.png)
